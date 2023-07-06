@@ -54,4 +54,63 @@
 // daysOfWeek.push("sun");
 // console.log(daysOfWeek); // ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
 
+// const playerName = "niya";
+// const playerPoints = 121212;
+// const playerHandsome = false;
+// const playerFat = "little bit";
 
+// Objects
+// const player = {
+//     name: "niya",
+//     points: 10,
+//     fat: true,
+// };
+// console.log(player); // {name: 'niya', points: 10, fat: true}
+// console.log(player.name); // niya
+// console.log(player["name"]); // niya
+
+// // const로 만든 object 안의 property를 수정하는 것이지 const를 건드리는 것이 아님.
+// player.fat = false;
+// console.log(player); // {name: 'niya', points: 10, fat: false}
+
+// // const 전체를 하나의 값으로서 업데이트하려고 하면 에러발생.
+// // player = false;
+// // console.log(player); // Uncaught TypeError: Assignment to constant variable.
+
+// player.lastName = "potato";
+// console.log(player);
+
+// functions
+// function은 어떤 코드를 캡슐화해서, 실행을 여러 번 할 수 있게 해준다.
+// function sayHello(nameOfPerson, age){
+//     console.log("Hello my name is " + nameOfPerson + " and I'm " + age);
+// }
+
+// sayHello("niya", 10);
+// sayHello("junghee", 23);
+// sayHello("eungyung", 21);
+
+// function plus(firstNumber, secondNumber) {
+//     console.log(firstNumber + secondNumber);
+
+// }
+// plus(); // NaN
+// plus(8, 60); // 68
+
+// function divide(firstNumber, secondNumber) {
+//     console.log(firstNumber / secondNumber);
+// }
+// divide(98, 20);
+
+// // 블록 안에서 선언된 함수는 블록 밖에서 존재할 수 없어서 에러발생
+// console.log(firstNumber); // Uncaught ReferenceError: firstNumber is not defined
+
+const player = {
+    name: "niya",
+    sayHello: function(otherPersonsName){
+        console.log("Hello " + otherPersonsName + " nice to meet you");
+    },
+}
+
+console.log(player.name);
+player.sayHello("lynn");
