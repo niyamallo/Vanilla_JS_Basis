@@ -105,12 +105,23 @@
 // // 블록 안에서 선언된 함수는 블록 밖에서 존재할 수 없어서 에러발생
 // console.log(firstNumber); // Uncaught ReferenceError: firstNumber is not defined
 
-const player = {
-    name: "niya",
-    sayHello: function(otherPersonsName){
-        console.log("Hello " + otherPersonsName + " nice to meet you");
-    },
+// const player = {
+//     name: "niya",
+//     sayHello: function(otherPersonsName){
+//         console.log("Hello " + otherPersonsName + " nice to meet you");
+//     },
+// }
+
+// console.log(player.name);
+// player.sayHello("lynn");
+
+// returns
+
+const age = 96;
+function calculateKrAge(ageOfForeigner){
+    return ageOfForeigner + 2;
 }
 
-console.log(player.name);
-player.sayHello("lynn");
+const KrAge = calculateKrAge(age);
+
+console.log(KrAge);
