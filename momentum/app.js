@@ -176,6 +176,23 @@
 // console.log(title.id);
 // console.log(title.className);
 
-const hellos = document.getElementsByClassName("hello");
+// 많은 Elements를 한번에 array 형식으로 불러올 때
+// const hellos = document.getElementsByClassName("hello");
 
-console.log(hellos);
+// console.log(hellos);
+
+// const title = document.getElementsByTagName("h1");
+
+// console.log(title);
+
+// querySelector: element를 CSS 방식으로 검색. 가장많이 쓰는 방식.
+// class는 앞에 .을 붙이고 id는 앞에 #을 붙인다.
+// querySelector를 사용할 때, 조건을 만족시키는 첫번째 element만 가져오게됨.
+// const title = document.querySelector(".hello h1")
+// // querySelectorAll을 사용하면 조건에 부합하는 모든 element를 array 형태로 가져옴.
+
+// console.log(title); // <h1>Grab me!</h1>
+
+const title = document.querySelector(".hello h1");
+
+title.innerText = "Hello";
