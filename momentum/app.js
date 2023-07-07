@@ -117,11 +117,65 @@
 
 // returns
 
-const age = 96;
-function calculateKrAge(ageOfForeigner){
-    return ageOfForeigner + 2;
-}
+// const age = 96;
+// function calculateKrAge(ageOfForeigner){
+//     return ageOfForeigner + 2;
+// }
 
-const KrAge = calculateKrAge(age);
+// const KrAge = calculateKrAge(age);
 
-console.log(KrAge);
+// console.log(KrAge);
+
+// conditionals
+
+// prompt()는 사용자에게 창을 띄울 수 있도록 해줌
+// prompt()를 사용하면 사용자가 입력할 때 까지 페이지의 자바스크립트가 멈춰서 더이상 사용하지 않음.
+// prompt()는 메시지도 별로 안예쁨... CSS를 적용시킬 수가 없음.
+// const age = prompt("How old are you?")
+
+// console.log(age);
+
+// // age의 타입이 보고싶을때는 console.log(type of age);
+
+// console.log(typeof "15", typeof parseInt("15")); // string number
+// // string이면 숫자의 크기를 비교 할 수 없다. 그래서 parseInt로 바꾸는 과정이 필요.
+// console.log(typeof "fsdbflsdbfsdlf"); // NaN: Not a Number
+
+// const age = parseInt(prompt("How old are you?"));
+//숫자를 입력하면 number, 문자를 입력하면 NaN
+
+// console.log(isNaN(age));
+
+// if (condition){
+//     /// condition === true 
+// } else {
+//     /// condition === false
+// }
+
+// if (isNaN(age) || age < 0){
+//     console.log("Please write a real positive number"); 
+// } else if(age < 18){
+//     console.log("You are too young.");
+// } else if(age >= 18 && age <= 50){ // %%: and ||: or
+//     console.log("You can drink");
+// } else if(age > 50 && age <= 80){
+//     console.log("You should exercise");
+// } else if(age === 100) { // ===: is !==: is not
+//     console.log("wow you are wise");
+// } else if(age > 80) {
+//     console.log("You can do whatever you want.");
+// }
+
+// document는 Javascript 관점에서의 HTML을 뜻한다.
+// const title = document.getElementById("title");
+
+// // console.dir(title);
+
+// title.innerText = "Got you!";
+
+// console.log(title.id);
+// console.log(title.className);
+
+const hellos = document.getElementsByClassName("hello");
+
+console.log(hellos);
