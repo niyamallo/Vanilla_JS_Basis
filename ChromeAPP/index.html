@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="login-form">
+        <!-- form 안에서 엔터를 누르고 input이 더 이상 존재하지 않는다면 자동으로 submit 된다! -->
+        <!-- 따라서 form이 submit 되는 것을 막아줄 작업이 필요함. -->
+        <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+        />
+        <button>Log In</button>
+    </form>
+    
+    <script src="app.js"></script>
+</body>
+</html>
