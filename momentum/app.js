@@ -254,19 +254,65 @@
 // window.addEventListener("offline", handleWindowOffline);
 // window.addEventListener("online", handleWindowOnline);
 
-// 2.6 CSS in JavaScript
+// 3.6 CSS in JavaScript
 
- const h1 = document.querySelector("div.hello:first-child h1");
+//  const h1 = document.querySelector("div.hello:first-child h1");
 
- function handleTitleClick() {
-    const currentColor = h1.style.color;
-    let newColor;
-    if(currentColor === "blue") {
-        newColor = "tomato";
-    } else {
-        newColor = "blue";
-    }
-    h1.style.color = newColor;
- }
+//  function handleTitleClick() {
+//     const currentColor = h1.style.color;
+//     let newColor;
+//     if(currentColor === "blue") {
+//         newColor = "tomato";
+//     } else {
+//         newColor = "blue";
+//     }
+//     h1.style.color = newColor;
+//  }
 
- h1.addEventListener("click", handleTitleClick);
+//  h1.addEventListener("click", handleTitleClick);
+
+ // 3.7 CSS in Javascript part Two
+
+// const h1 = document.querySelector("div.hello:first-child h1");
+
+//  function handleTitleClick() {
+//     const clickedClass = "clicked"; // 변수를 지정해주면 개발자 모드에서 쉽게 버그를 찾을 수 있다.
+//     if(h1.className === clickedClass) {
+//         // 만약 if(h1.className === clikcedClass)라고 오타를 내면
+//         // app.js:280 Uncaught ReferenceError: clikcedClass is not defined
+//         // at HTMLHeadingElement.handleTitleClick라는 에러 발생됨을 쉽게 체크가능.
+//         h1.className = "";
+//     } else {
+//         h1.className = clickedClass;
+//     }
+//  }  // className으로 작업했기 때문에 이전의 class는 고려하지 않고 모든 것이 교체되는 식으로 작동함.
+//     // 3.8에서 classList를 사용하는 방법을 배울 것.
+
+//  h1.addEventListener("click", handleTitleClick);
+
+// 3.8 CSS in JavaScript part Three
+
+// 3.8.1 className만을 사용하는 방법(덜 편함)
+// const h1 = document.querySelector("div.hello:first-child h1");
+
+//  function handleTitleClick() {
+//     const clickedClass = "clicked";
+//     if(h1.classList.contains(clickedClass)) {
+//         h1.classList.remove(clickedClass);
+//     } else {
+//         h1.classList.add(clickedClass);
+//     }
+//  }
+
+//  h1.addEventListener("click", handleTitleClick);
+
+// 3.8.2 toggle function을 추가로 사용하는 방법(편함)
+// toggle function은 class name(token)이 존재하는지 확인하고
+// 만약 class name이 존재한다면 toggle은 class name을 제거함. 존재하지 않는다면 추가함.
+// const h1 = document.querySelector("div.hello:first-child h1");
+
+// function handleTitleClick() {
+//     h1.classList.toggle("clicked");
+// }
+
+//  h1.addEventListener("click", handleTitleClick);
