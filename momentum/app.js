@@ -205,51 +205,68 @@
 // title.style.color = "blue";
 
 // Evenvts
-const title = document.querySelector(".hello:first-child h1");
+// const title = document.querySelector(".hello:first-child h1");
 
-function handleTitleClick() {
-    title.style.color = "blue";
-    // Javascript로 style을 변경하는 것은 가능하나, style은 가급적 CSS를 이용해서 변경하는 것이 좋음
-}
+// function handleTitleClick() {
+//     title.style.color = "blue";
+//     // Javascript로 style을 변경하는 것은 가능하나, style은 가급적 CSS를 이용해서 변경하는 것이 좋음
+// }
 
-// console.dir(element);를 사용한 뒤 on으로 시작하는 property를 찾으면
-// 해당하는 상황에서 작동하게 할 수 있음. 실제 사용할 때는 on을 떼고 사용.
-// 예를 들어 onclick을 사용하고 싶다면 "click" 입력.
-title.addEventListener("click", handleTitleClick);
-// title.onclick = handleTitleClick; 이렇게 쓸 수도 있는데
-// addEventListener를 사용하는 것이 나중에 removeEventListener를 사용하기 편함
-
-
-function handleMouseEnter() {
-    title.innerText = "Mouse is here!";
-}
-function handleMouseLeave() {
-    title.innerText = "Mouse is gone!";
-}
-
-title.addEventListener("mouseenter", handleMouseEnter);
-title.addEventListener("mouseleave", handleMouseLeave);
-
-// document와 window는 기본적으로 JavaScript가 제공
-
-function handleWindowResize() {
-    document.body.style.backgroundColor = "tomato";
-}
-
-function handleWindowCopy() {
-    alert("copier!");
-}
-
-function handleWindowOffline() {
-    alert("SOS no WIFI");
-}
-
-function handleWindowOnline() {
-    alert("ALL Good!");
-}
+// // console.dir(element);를 사용한 뒤 on으로 시작하는 property를 찾으면
+// // 해당하는 상황에서 작동하게 할 수 있음. 실제 사용할 때는 on을 떼고 사용.
+// // 예를 들어 onclick을 사용하고 싶다면 "click" 입력.
+// title.addEventListener("click", handleTitleClick);
+// // title.onclick = handleTitleClick; 이렇게 쓸 수도 있는데
+// // addEventListener를 사용하는 것이 나중에 removeEventListener를 사용하기 편함
 
 
-window.addEventListener("resize", handleWindowResize);
-window.addEventListener("copy", handleWindowCopy);
-window.addEventListener("offline", handleWindowOffline);
-window.addEventListener("online", handleWindowOnline);
+// function handleMouseEnter() {
+//     title.innerText = "Mouse is here!";
+// }
+// function handleMouseLeave() {
+//     title.innerText = "Mouse is gone!";
+// }
+
+// title.addEventListener("mouseenter", handleMouseEnter);
+// title.addEventListener("mouseleave", handleMouseLeave);
+
+// // document와 window는 기본적으로 JavaScript가 제공
+
+// function handleWindowResize() {
+//     document.body.style.backgroundColor = "tomato";
+// }
+
+// function handleWindowCopy() {
+//     alert("copier!");
+// }
+
+// function handleWindowOffline() {
+//     alert("SOS no WIFI");
+// }
+
+// function handleWindowOnline() {
+//     alert("ALL Good!");
+// }
+
+
+// window.addEventListener("resize", handleWindowResize);
+// window.addEventListener("copy", handleWindowCopy);
+// window.addEventListener("offline", handleWindowOffline);
+// window.addEventListener("online", handleWindowOnline);
+
+// 2.6 CSS in JavaScript
+
+ const h1 = document.querySelector("div.hello:first-child h1");
+
+ function handleTitleClick() {
+    const currentColor = h1.style.color;
+    let newColor;
+    if(currentColor === "blue") {
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+    h1.style.color = newColor;
+ }
+
+ h1.addEventListener("click", handleTitleClick);
